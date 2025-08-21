@@ -153,15 +153,16 @@
   fileInput.addEventListener("change", function () {
   handleFiles(this.files);
   });
-  
+ 
   function handleFiles(files) {
   filePreview.innerHTML = '';
   Array.from(files).forEach(function (file) {
-  var li = document.createElement("li");
-  li.innerHTML = `<strong>file.name</strong> -{(file.size / 1024).toFixed(1)} KB`;
+  var li = document.createElement('li');
+  li.innerHTML = "<strong style='color: blue;'> File Name: &#160&#160" +file.name+ "</strong>"//+{(file.size / 1024).toFixed(1)}+" KB";
   filePreview.appendChild(li);
   });
   }
+
   
   </script>
   
